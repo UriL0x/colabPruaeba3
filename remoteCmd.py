@@ -52,7 +52,7 @@ def rceClientMode():
     
 def showOptions():
     print("-s >> Set RCE as server mode (the victim make a connection to you)\n"
-          "-c >> Set RCE as client mode (the victim is the server host, you connect to him)")
+          "-c >> Set RCE as client mode (the victim is the server host, you connect to him)\n")
 
 if __name__ == "__main__":
     # python cmd -s

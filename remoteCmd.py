@@ -28,4 +28,5 @@ while estado:
         salida = getoutput(comando)
         client_socket.send(salida.encode())
     
-    sleep(0.1)
+
+    
